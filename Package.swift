@@ -13,9 +13,10 @@ let package = Package(
             targets: ["Category"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        .package(url: "https://github.com/realm/realm-swift.git", branch: "master"),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.2.0")),
+        // 1. Konsisten dengan versi stabil Realm (dari 10.47.0)
+        .package(url: "https://github.com/realm/realm-swift.git", .upToNextMajor(from: "10.47.0")),
+        // 2. Konsisten dengan versi stabil Alamofire (dari 5.9.1)
+        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.9.1")),
         .package(url: "https://github.com/nunutech40/MealsAppCore.git", from: "1.0.0"),
     ],
     targets: [
